@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+</head>
+
+<body class="bg-gray-400">
+  <div
+    class="container mx-auto px-4 mt-4"
+    x-data="{
+        img1: 'HyTwtsk8XqA',
+        img2: 'TIMCZe9JghI',
+        img3: 'PIrouQ_A8j0',
+        prefix: 'https://source.unsplash.com', 
+        image: 'HyTwtsk8XqA', 
+        size: '320x400'
+      }"
+    >
+    <div>
+      <img :src="`${prefix}/${image}/${size}`"
+        alt="mac pro"
+        >
+    </div>
+    <div class="flex items-center mt-4">
+      <a
+        href="#"
+        class="border border-transparent hover:border-blue-500"
+        @click.prevent="image = img1"
+        >
+        <img 
+          :src="`${prefix}/${img1}/${size}`"
+          alt="mac pro"
+          class="w-12"
+          >
+      </a>
+      <a
+        href="#"
+        class="border border-transparent hover:border-blue-500"
+        @click.prevent="image = img2"
+        >
+        <img
+          :src="`${prefix}/${img2}/${size}`"
+          alt="mac pro" 
+          class="w-12"
+          >
+      </a>
+      <a
+        href="#" 
+        class="border border-transparent hover:border-blue-500" 
+        @click.prevent="image = img3"
+        >
+        <img
+          :src="`${prefix}/${img3}/${size}`"
+          alt="mac pro"
+          class="w-12"
+          >
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
